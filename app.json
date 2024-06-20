@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "codescan",
-    "slug": "codescan",
+    "name": "Ramson Stainless",
+    "slug": "Ramson Stainless",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "codescan",
+    "scheme": "ramson stainless",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash.png",
@@ -19,7 +19,12 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.typicaltechno.codescan"
     },
     "web": {
       "bundler": "metro",
@@ -31,14 +36,28 @@
       [
         "expo-camera",
         {
-          "cameraPermission": "Allow Codescan to access your camera",
+          "cameraPermission": "Allow Ramson Stainless to access your camera",
           "microphonePermission": "Allow Codescan to access your microphone",
           "recordAudioAndroid": true
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow Ramson Stainless to use your location."
         }
       ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "11fa2e60-2f34-4b85-aaac-216783bc6603"
+      }
     }
   }
 }
